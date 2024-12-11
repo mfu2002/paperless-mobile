@@ -46,9 +46,9 @@ class _EventListenerShellState extends State<EventListenerShell>
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    ReceiveSharingIntent.getInitialMedia().then(_onReceiveSharedFiles);
+    ReceiveSharingIntent.instance.getInitialMedia().then(_onReceiveSharedFiles);
     _subscription =
-        ReceiveSharingIntent.getMediaStream().listen(_onReceiveSharedFiles);
+        ReceiveSharingIntent.instance.getMediaStream().listen(_onReceiveSharedFiles);
     context.read<PendingTasksNotifier>().addListener(_onTasksChanged);
     _documentDeletedSubscription =
         context.read<DocumentChangedNotifier>().$deleted.listen((event) {
