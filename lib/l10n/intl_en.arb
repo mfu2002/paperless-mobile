@@ -161,6 +161,8 @@
   "@filterDocuments": {
     "description": "Title of the document filter"
   },
+  "originalFileName": "Original File Name",
+  "@originalFileName": {},
   "originalMD5Checksum": "Original MD5-Checksum",
   "@originalMD5Checksum": {},
   "mediaFilename": "Media Filename",
